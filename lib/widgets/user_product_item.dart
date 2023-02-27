@@ -1,4 +1,4 @@
-import 'dart:html';
+
 
 import 'package:flutter/material.dart';
 class UserProductItem extends StatelessWidget {
@@ -10,7 +10,7 @@ class UserProductItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(title: Text('--'),
+    return ListTile(title: Text(title),
     leading: CircleAvatar(backgroundImage: NetworkImage(imageUrl),
     ),
       trailing: Container(
