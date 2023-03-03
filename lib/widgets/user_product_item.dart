@@ -34,6 +34,7 @@ class UserProductItem extends StatelessWidget {
           Provider.of<Products>(context,listen: false).deleteProduct(id);
 
 
+
         },
           color: Theme.of(context).errorColor,
         ),
