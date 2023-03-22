@@ -70,7 +70,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
               });
             },
             icon: Icon(
-              Icons.more_vert,
+              Icons.favorite,
             ),
             itemBuilder: (_) => [
               PopupMenuItem(
@@ -90,7 +90,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
             ),
             child: IconButton(
               icon: Icon(
-                Icons.shopping_cart,
+                Icons.shopping_cart,    // icona non funziona?
               ),
               onPressed: () {
                 Navigator.of(context).pushNamed(CartScreen.routeName);
