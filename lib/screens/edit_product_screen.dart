@@ -103,8 +103,8 @@ class _EditProductScreenState extends State<EditProductScreen> {
         await showDialog(
           context: context,
           builder: (ctx) => AlertDialog(
-            title: Text('An error occurred!'),
-            content: Text('Something went wrong.'),
+            title: Text('E apparso un errore '),
+            content: Text('Qualcosa è andato storto'),
             actions: <Widget>[
               TextButton(
                 child: Text('Okay'),
@@ -134,7 +134,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Edit Product'),
+        title: Text('Modifica prodotto'),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.save),
@@ -161,7 +161,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                 },
                 validator: (value) {
                   if (value.isEmpty) {
-                    return 'Please provide a value.';
+                    return 'Fornisci un valore';
                   }
                   return null;
                 },
@@ -187,13 +187,13 @@ class _EditProductScreenState extends State<EditProductScreen> {
                 },
                 validator: (value) {
                   if (value.isEmpty) {
-                    return 'Please enter a price.';
+                    return 'Inserisci un prezzo';
                   }
                   if (double.tryParse(value) == null) {
-                    return 'Please enter a valid number.';
+                    return 'Inserisci un numero valido';
                   }
                   if (double.parse(value) <= 0) {
-                    return 'Please enter a number greater than zero.';
+                    return 'Inserisci un numero maggiore di zero';
                   }
                   return null;
                 },
@@ -215,10 +215,10 @@ class _EditProductScreenState extends State<EditProductScreen> {
                 focusNode: _descriptionFocusNode,
                 validator: (value) {
                   if (value.isEmpty) {
-                    return 'Please enter a description.';
+                    return 'Inserisci una descrizione';
                   }
                   if (value.length < 10) {
-                    return 'Should be at least 10 characters long.';
+                    return 'Dovresti inserire almeno 10 caratteri';
                   }
                   return null;
                 },
@@ -270,16 +270,16 @@ class _EditProductScreenState extends State<EditProductScreen> {
                       },
                       validator: (value) {
                         if (value.isEmpty) {
-                          return 'Please enter an image URL.';
+                          return 'Inserisci un IMG Url ';
                         }
                         if (!value.startsWith('http') &&
                             !value.startsWith('https')) {
-                          return 'Please enter a valid URL.';
+                          return 'Inserisci un IMG Url ';
                         }
                         if (!value.endsWith('.png') &&
                             !value.endsWith('.jpg') &&
                             !value.endsWith('.jpeg')) {
-                          return 'Please enter a valid image URL.';
+                          return 'Inserisci un IMG Url valido';
                         }
                         return null;
                       },

@@ -94,7 +94,7 @@ class _OrderButtonState extends State<OrderButton> {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      child: _isLoading ? CircularProgressIndicator() : Text('ORDER NOW'),
+      child: _isLoading ? CircularProgressIndicator() : Text('ORDINA ORA '),
       onPressed: (widget.cart.totalAmount <= 0 || _isLoading)
           ? null
           : () async {
